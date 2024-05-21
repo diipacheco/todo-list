@@ -1,0 +1,23 @@
+.emptyTasksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem 1.5rem;
+  border-radius: 8px;
+
+  border-top: 1px solid var(--gray-400);
+  color: var(--gray-300);
+}
+
+.emptyTasksContainer img {
+  height: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.emptyTasksContainer p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
