@@ -1,11 +1,18 @@
-import { Header } from "./components/Header"
+import { Header } from './components/Header';
+import styles from './App.module.css';
+import { Input } from './components/Input';
 function App() {
 
   return (
-    <>
+    <main>
       <Header />
-      <h1>Hello World</h1>
-    </>
+      <section className={styles.mainSection}>
+        <div className={styles.taskInputContainer}>
+          <Input />
+          <button>Criar</button>
+        </div>
+      </section>
+    </main>
   )
 }
 

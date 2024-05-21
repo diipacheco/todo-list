@@ -1,0 +1,14 @@
+.mainSection {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.taskInputContainer {
+  display: flex;
+  flex: 1;
+  margin-top: -1.688rem;
+
+  justify-content: space-between;
+  gap: 0.5rem;
+}
