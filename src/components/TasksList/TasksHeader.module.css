@@ -1,0 +1,33 @@
+.tasksHeader {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasksHeader aside {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+aside .createdTasks {
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+aside span {
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  background-color: var(--gray-400);
+  padding: 0.125rem 0.5rem;
+  border-radius: 45%;
+  margin-left: 0.5rem;
+}
+
+aside .finishedTasksCounter {
+  color: var(--purple);
+  font-weight: bold;
+  font-size: 0.875rem;
+}
