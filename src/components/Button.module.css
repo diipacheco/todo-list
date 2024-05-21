@@ -1,0 +1,25 @@
+.createTaskButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 3.25rem;
+  gap: 0.35rem;
+  padding: 1rem;
+
+  border-radius: 8px;
+  border: 0;
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+
+  line-height: 140%;
+  font-weight: bold;
+  font-size: 0.875rem;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.createTaskButton:hover {
+  background-color: var(--blue);
+}
