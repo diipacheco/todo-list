@@ -3,10 +3,10 @@ export function TasksHeader() {
   return (
     <header className={styles.tasksHeader}>
       <aside>
-        <p className={styles.createdTasks}>Tarefas criadas <span>0</span></p>
+        <p className={styles.createdTasks}>Tarefas criadas <span className={styles.tasksCounter}>5</span></p>
       </aside>
       <aside>
-        <p className={styles.finishedTasksCounter}>Concluídas <span>0</span></p>
+        <p className={styles.finishedTasks}>Concluídas <span className={styles.tasksCounter}>2 de 5</span></p>
       </aside>
     </header>
   )

@@ -3,6 +3,7 @@
   flex: 1;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 
 .tasksHeader aside {
@@ -17,16 +18,16 @@ aside .createdTasks {
   font-size: 0.875rem;
 }
 
-aside span {
+.tasksCounter {
   color: var(--gray-200);
   font-size: 0.75rem;
   background-color: var(--gray-400);
   padding: 0.125rem 0.5rem;
-  border-radius: 45%;
+  border-radius: 16px;
   margin-left: 0.5rem;
 }
 
-aside .finishedTasksCounter {
+aside .finishedTasks {
   color: var(--purple);
   font-weight: bold;
   font-size: 0.875rem;

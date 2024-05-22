@@ -15,7 +15,6 @@
 
 .tasksContainer {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-direction: column;  
   margin-top: 4rem;
 }

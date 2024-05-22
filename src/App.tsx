@@ -4,7 +4,8 @@ import { Header } from './components/Header';
 import { Input } from './components/Input';
 import { Button } from './components/Button';
 import { TasksHeader } from './components/TasksList/TasksHeader';
-import { EmptyTasks } from './components/TasksList/EmptyTasks';
+import { Task } from './components/TasksList/Task';
+// import { EmptyTasks } from './components/TasksList/EmptyTasks';
 
 import styles from './App.module.css';
 function App() {
@@ -22,7 +23,11 @@ function App() {
 
         <div className={styles.tasksContainer}>
           <TasksHeader />
-          <EmptyTasks />
+          <Task />
+          <Task />
+          <Task />
+
+          {/* <EmptyTasks /> */}
         </div>
       </section>
     </main>
