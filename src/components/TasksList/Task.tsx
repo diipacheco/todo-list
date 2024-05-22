@@ -1,7 +1,12 @@
 import { Check, Trash } from '@phosphor-icons/react';
 
+import { ITask } from '../../App';
 import styles from './Task.module.css';
-export function Task() {
+
+interface TaskProps {
+  task: ITask;
+}
+export function Task({ task }: TaskProps) {
   return (
     <div className={styles.taskContainer}>
       <aside className={styles.checkBoxAside}>
@@ -13,11 +18,9 @@ export function Task() {
         </label>
       </aside>
 
-      <aside>
-        <div className={styles.taskTextContainer}>
-          <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-        </div>
-      </aside>
+      <div className={styles.taskTextContainer}>
+        <p>{task.text}</p>
+      </div>
       <aside className={styles.deleteTaskAside}>
         <button>
           <Trash size={16} color="#808080" />
