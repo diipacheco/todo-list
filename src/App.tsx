@@ -19,17 +19,31 @@ function App() {
   const [taskText, setTaskText] = useState('');
   const [tasks, setTasks] = useState<ITask[]>([]);
 
+  const doneTasks = tasks.filter((task => task.done));
+
   function onInputTextChange(event: ChangeEvent<HTMLInputElement>) {
     setTaskText(event.target.value);
   }
 
   function handleCreateText() {
-    setTasks([...tasks, {
+    setTasks(state => [...state, {
       id: tasks.length + 1,
       text: taskText,
       done: false,
     }]);
     setTaskText('');
+  }
+
+  function handleChangeTaskStatus(taskToChangeStatus: number) {
+    const taskToUpdate = tasks.find(task => taskToChangeStatus === task.id);
+    if (taskToUpdate) {
+      taskToUpdate.done = !taskToUpdate.done;
+      setTasks(state => state.map(task => task.id === taskToChangeStatus ? taskToUpdate : task));
+    }
+  }
+
+  function handleDeleteTask(taskToDelete: number) {
+    setTasks(state => state.filter(task => task.id !== taskToDelete));
   }
 
   return (
@@ -54,6 +68,7 @@ function App() {
         <div className={styles.tasksContainer}>
           <TasksHeader
             tasksCreatedCounter={tasks.length}
+            doneTasks={doneTasks.length}
           />
           {
             tasks.length > 0 ?
@@ -61,6 +76,8 @@ function App() {
                 <Task
                   key={task.id}
                   task={task}
+                  handleChangeTaskStatus={handleChangeTaskStatus}
+                  handleDeleteTask={handleDeleteTask}
                 />
               )) :
               <EmptyTasks />
